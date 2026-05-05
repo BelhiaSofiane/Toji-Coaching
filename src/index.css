@@ -27,8 +27,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 16% 12%, rgba(6, 78, 59, 0.2), transparent 32rem),
-    radial-gradient(circle at 90% 40%, rgba(6, 95, 70, 0.14), transparent 28rem),
+    radial-gradient(circle at 16% 12%, rgba(90, 15, 15, 0.22), transparent 32rem),
+    radial-gradient(circle at 90% 40%, rgba(120, 20, 20, 0.14), transparent 28rem),
     #000;
 }
 
@@ -71,8 +71,8 @@ a {
 }
 
 ::selection {
-  color: #000;
-  background: #10b981;
+  color: #fff;
+  background: #b91c1c;
 }
 
 @layer components {
@@ -85,19 +85,19 @@ a {
   }
 
   .eyebrow {
-    @apply text-xs font-black uppercase tracking-[0.32em] text-emerald-500;
+    @apply text-xs font-black uppercase tracking-[0.32em] text-red-500;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-4 text-sm font-black uppercase tracking-[0.18em] text-black shadow-lg shadow-emerald-950/40 transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-emerald-700/30 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black;
+    @apply inline-flex items-center justify-center rounded-full bg-red-600 px-6 py-4 text-sm font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-red-950/50 transition duration-300 hover:-translate-y-0.5 hover:bg-red-500 hover:shadow-red-800/40 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full border border-emerald-800 bg-black/50 px-6 py-4 text-sm font-black uppercase tracking-[0.18em] text-white transition duration-300 hover:-translate-y-0.5 hover:border-emerald-500 hover:bg-emerald-950/50 focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-black;
+    @apply inline-flex items-center justify-center rounded-full border border-red-900 bg-black/50 px-6 py-4 text-sm font-black uppercase tracking-[0.18em] text-white transition duration-300 hover:-translate-y-0.5 hover:border-red-600 hover:bg-red-950/50 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2 focus:ring-offset-black;
   }
 
   .btn-card {
-    @apply inline-flex items-center justify-center rounded-full border border-emerald-800 px-5 py-3 text-xs font-black uppercase tracking-[0.2em] text-white transition duration-300 group-hover:border-emerald-400 group-hover:bg-emerald-500 group-hover:text-black;
+    @apply inline-flex items-center justify-center rounded-full border border-red-900 px-5 py-3 text-xs font-black uppercase tracking-[0.2em] text-white transition duration-300 group-hover:border-red-500 group-hover:bg-red-600 group-hover:text-white;
   }
 }
 

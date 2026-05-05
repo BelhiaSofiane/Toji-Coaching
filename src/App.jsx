@@ -40,13 +40,13 @@ function Nav({ onContactOpen }) {
   const { t } = useTranslation()
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-emerald-950/70 bg-black/70 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-red-950/70 bg-black/70 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
         <a href="#hero" className="group leading-none">
           <span className="block text-sm font-black uppercase tracking-[0.42em] text-white">
             {t('brand.handle')}
           </span>
-          <span className="mt-1 block text-[0.65rem] uppercase tracking-[0.34em] text-emerald-500">
+          <span className="mt-1 block text-[0.65rem] uppercase tracking-[0.34em] text-red-500">
             {t('brand.motto')}
           </span>
         </a>
@@ -83,7 +83,7 @@ function Hero() {
           src="/Picsart_24-08-01_17-50-54-868.jpg.jpeg"
           alt={t('hero.imageAlt')}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(6,95,70,0.34),transparent_30%),linear-gradient(90deg,#000_0%,rgba(0,0,0,0.86)_34%,rgba(0,0,0,0.32)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(120,20,20,0.38),transparent_30%),linear-gradient(90deg,#000_0%,rgba(0,0,0,0.86)_34%,rgba(0,0,0,0.32)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
       </div>
 
@@ -107,14 +107,14 @@ function Hero() {
           </div>
         </div>
 
-        <div className="animate-rise rounded-[2rem] border border-emerald-900/60 bg-emerald-950/10 p-4 shadow-2xl shadow-emerald-950/30 [animation-delay:160ms] lg:justify-self-end">
-          <div className="grid grid-cols-3 divide-x divide-emerald-900/70 rounded-[1.5rem] border border-emerald-950 bg-black/80">
+        <div className="animate-rise rounded-[2rem] border border-red-900/60 bg-red-950/10 p-4 shadow-2xl shadow-red-950/30 [animation-delay:160ms] lg:justify-self-end">
+          <div className="grid grid-cols-3 divide-x divide-red-900/70 rounded-[1.5rem] border border-red-950 bg-black/80">
             {stats.map(({ value, label }) => (
               <div className="p-4 text-center sm:p-6" key={value}>
                 <p className="text-xl font-black uppercase text-white sm:text-2xl">
                   {value}
                 </p>
-                <p className="mt-2 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-emerald-500">
+                <p className="mt-2 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-red-500">
                   {label}
                 </p>
               </div>
@@ -131,16 +131,16 @@ function About() {
   const tags = t('about.tags', { returnObjects: true })
 
   return (
-    <section id="about" className="section-padding border-t border-emerald-950">
+    <section id="about" className="section-padding border-t border-red-950">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
         <div className="relative">
           <img
-            className="aspect-[4/5] w-full rounded-[2rem] border border-emerald-900/70 object-cover shadow-2xl shadow-emerald-950/20"
+            className="aspect-[4/5] w-full rounded-[2rem] border border-red-900/70 object-cover shadow-2xl shadow-red-950/20"
             src="/B612_20241004_101816_497.jpg.jpeg"
             alt={t('about.imageAlt')}
           />
-          <div className="absolute -bottom-5 left-5 right-5 rounded-2xl border border-emerald-800/70 bg-black/85 p-5 backdrop-blur">
-            <p className="text-sm font-black uppercase tracking-[0.28em] text-emerald-500">
+          <div className="absolute -bottom-5 left-5 right-5 rounded-2xl border border-red-800/70 bg-black/85 p-5 backdrop-blur">
+            <p className="text-sm font-black uppercase tracking-[0.28em] text-red-500">
               {t('brand.name')}
             </p>
             <p className="mt-1 text-2xl font-black uppercase">{t('brand.handle')}</p>
@@ -156,7 +156,7 @@ function About() {
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             {tags.map((item) => (
               <div
-                className="rounded-2xl border border-emerald-950 bg-emerald-950/20 p-5 text-sm font-black uppercase tracking-[0.16em] text-white"
+                className="rounded-2xl border border-red-950 bg-red-950/20 p-5 text-sm font-black uppercase tracking-[0.16em] text-white"
                 key={item}
               >
                 {item}
@@ -174,7 +174,7 @@ function Services() {
   const services = t('services.items', { returnObjects: true })
 
   return (
-    <section id="services" className="section-padding bg-[linear-gradient(180deg,#020403,#000)]">
+    <section id="services" className="section-padding bg-[linear-gradient(180deg,#140303,#000)]">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <p className="eyebrow">{t('services.eyebrow')}</p>
@@ -189,13 +189,13 @@ function Services() {
             <article
               className={`group flex min-h-[30rem] flex-col rounded-[1.75rem] border p-6 transition duration-500 hover:-translate-y-2 ${
                 service.featured
-                  ? 'border-emerald-500 bg-emerald-950/35 shadow-2xl shadow-emerald-950/40'
-                  : 'border-emerald-950 bg-zinc-950/70 hover:border-emerald-700'
+                  ? 'border-red-500 bg-red-950/35 shadow-2xl shadow-red-950/40'
+                  : 'border-red-950 bg-zinc-950/70 hover:border-red-700'
               }`}
               key={service.name}
             >
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.24em] text-emerald-500">
+                <p className="text-xs font-black uppercase tracking-[0.24em] text-red-500">
                   {service.price} {t('services.perMonth')}
                 </p>
                 <h3 className="mt-5 text-2xl font-black uppercase leading-tight text-white">
@@ -209,7 +209,7 @@ function Services() {
               <ul className="mt-8 space-y-4 text-sm leading-6 text-zinc-300">
                 {service.features.map((feature) => (
                   <li className="flex gap-3" key={feature}>
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-red-500" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -231,7 +231,7 @@ function Proof() {
   const imageAlts = t('proof.images', { returnObjects: true })
 
   return (
-    <section id="proof" className="section-padding border-y border-emerald-950">
+    <section id="proof" className="section-padding border-y border-red-950">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
@@ -246,7 +246,7 @@ function Proof() {
         <div className="mt-12 grid auto-rows-[18rem] gap-4 md:grid-cols-4">
           {gallery.map((image, index) => (
             <figure
-              className={`group relative overflow-hidden rounded-[1.5rem] border border-emerald-950 bg-emerald-950/10 ${
+              className={`group relative overflow-hidden rounded-[1.5rem] border border-red-950 bg-red-950/10 ${
                 index === 0 || index === 5 ? 'md:col-span-2 md:row-span-2' : ''
               }`}
               key={image}
@@ -269,9 +269,9 @@ function Contact({ onContactOpen }) {
   const { t } = useTranslation()
 
   return (
-    <section id="contact" className="section-padding bg-emerald-950/10">
+    <section id="contact" className="section-padding bg-red-950/10">
       <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="rounded-[2rem] border border-emerald-900/70 bg-black p-7 sm:p-10">
+        <div className="rounded-[2rem] border border-red-900/70 bg-black p-7 sm:p-10">
           <p className="eyebrow">{t('contact.eyebrow')}</p>
           <h2 className="section-title mt-4">{t('contact.title')}</h2>
           <p className="mt-5 text-lg leading-8 text-zinc-300">
@@ -294,7 +294,7 @@ function Contact({ onContactOpen }) {
           </div>
         </div>
 
-        <div className="min-h-[28rem] overflow-hidden rounded-[2rem] border border-emerald-900/70 bg-zinc-950">
+        <div className="min-h-[28rem] overflow-hidden rounded-[2rem] border border-red-900/70 bg-zinc-950">
           <iframe
             className="h-full min-h-[28rem] w-full grayscale invert"
             title={t('contact.mapTitle')}
@@ -348,12 +348,12 @@ function ContactModal({ isOpen, onClose }) {
         onClick={onClose}
         type="button"
       />
-      <div className="relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-emerald-700/70 bg-black/90 p-6 shadow-2xl shadow-emerald-950/50 sm:p-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.22),transparent_40%)]" />
+      <div className="relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-red-700/70 bg-black/90 p-6 shadow-2xl shadow-red-950/50 sm:p-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(220,38,38,0.24),transparent_40%)]" />
         <div className="relative">
           <button
             aria-label={t('contactModal.close')}
-            className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-emerald-900 text-xl font-black text-zinc-400 transition hover:border-emerald-500 hover:text-white rtl:left-0 rtl:right-auto"
+            className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-red-900 text-xl font-black text-zinc-400 transition hover:border-red-500 hover:text-white rtl:left-0 rtl:right-auto"
             onClick={onClose}
             type="button"
           >
@@ -373,7 +373,7 @@ function ContactModal({ isOpen, onClose }) {
 
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             <a
-              className="rounded-2xl border border-emerald-600 bg-emerald-500 px-5 py-5 text-center text-sm font-black uppercase tracking-[0.16em] text-black transition hover:bg-white"
+              className="rounded-2xl border border-red-600 bg-red-600 px-5 py-5 text-center text-sm font-black uppercase tracking-[0.16em] text-white transition hover:bg-red-500"
               href="https://wa.me/213799513442"
               rel="noreferrer"
               target="_blank"
@@ -381,7 +381,7 @@ function ContactModal({ isOpen, onClose }) {
               {t('contactModal.whatsapp')}
             </a>
             <a
-              className="rounded-2xl border border-emerald-800 bg-emerald-950/50 px-5 py-5 text-center text-sm font-black uppercase tracking-[0.16em] text-white transition hover:border-emerald-500 hover:bg-emerald-900/70"
+              className="rounded-2xl border border-red-800 bg-red-950/50 px-5 py-5 text-center text-sm font-black uppercase tracking-[0.16em] text-white transition hover:border-red-500 hover:bg-red-900/70"
               href="https://www.instagram.com/toji_fit95"
               rel="noreferrer"
               target="_blank"
@@ -399,14 +399,14 @@ function Footer() {
   const { t } = useTranslation()
 
   return (
-    <footer className="border-t border-emerald-950 px-5 py-10 sm:px-8">
+    <footer className="border-t border-red-950 px-5 py-10 sm:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-5 text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
         <p className="font-black uppercase tracking-[0.3em] text-white">
           {t('footer.identity')}
         </p>
         <p className="uppercase tracking-[0.22em]">{t('footer.motto')}</p>
         <a
-          className="font-black uppercase tracking-[0.24em] text-emerald-500 transition hover:text-white"
+          className="font-black uppercase tracking-[0.24em] text-red-500 transition hover:text-white"
           href="https://www.instagram.com/toji_fit95"
           rel="noreferrer"
           target="_blank"
@@ -427,13 +427,13 @@ function LanguageDock({ activeLanguage }) {
   ]
 
   return (
-    <div className="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 gap-1 rounded-full border border-emerald-900/80 bg-black/80 p-1 shadow-2xl shadow-emerald-950/40 backdrop-blur">
+    <div className="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 gap-1 rounded-full border border-red-900/80 bg-black/80 p-1 shadow-2xl shadow-red-950/40 backdrop-blur">
       {languages.map(([code, label]) => (
         <button
           className={`rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.18em] transition ${
             activeLanguage === code
-              ? 'bg-emerald-500 text-black'
-              : 'text-zinc-400 hover:bg-emerald-950/60 hover:text-white'
+              ? 'bg-red-500 text-black'
+              : 'text-zinc-400 hover:bg-red-950/60 hover:text-white'
           }`}
           key={code}
           onClick={() => i18n.changeLanguage(code)}
