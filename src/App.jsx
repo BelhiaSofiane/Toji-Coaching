@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const gallery = [
-  '/B612_20250206_085852_551.jpg.jpeg',
-  '/B612_20250411_174750_488.jpg.jpeg',
-  '/B612_20250417_125747_836.jpg.jpeg',
-  '/B612_20250429_134629_681.jpg.jpeg',
-  '/B612_20240915_144233_036.jpg.jpeg',
   '/Picsart_24-08-01_17-50-54-868.jpg.jpeg',
+  '/B612_20250417_125747_836.jpg.jpeg',
+  // '/B612_20250206_085852_551.jpg.jpeg',
+  // '/B612_20250411_174750_488.jpg.jpeg',
+  // '/B612_20250429_134629_681.jpg.jpeg',
+  // '/B612_20240915_144233_036.jpg.jpeg',
 ]
 
 function App() {
@@ -247,7 +247,7 @@ function Proof() {
           {gallery.map((image, index) => (
             <figure
               className={`group relative overflow-hidden rounded-[1.5rem] border border-red-950 bg-red-950/10 ${
-                index === 0 || index === 5 ? 'md:col-span-2 md:row-span-2' : ''
+                index === 0 || index === 1 ? 'md:col-span-2 md:row-span-2' : ''
               }`}
               key={image}
             >
